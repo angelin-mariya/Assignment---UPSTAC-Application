@@ -92,9 +92,9 @@ public class ConsultationController {
         try {
 
             User doctor = userLoggedInService.getLoggedInUser(); // finds the current logged in user(doctor)
-            TestRequest testrequest = testRequestUpdateService.assignForConsultation(id, doctor); // assigns for
+            TestRequest testRequest = testRequestUpdateService.assignForConsultation(id, doctor); // assigns for
             // consultation using id and current logged in user(doctor)
-            return testrequest;
+            return testRequest;
 
         } catch (AppException e) {
             throw asBadRequest(e.getMessage());
